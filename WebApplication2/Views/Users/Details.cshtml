@@ -1,0 +1,58 @@
+﻿@model WebApplication2.Models.Users
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>用户信息</h2>
+
+<div>
+    <h4>用户</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Uorg)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Uorg)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MFPMS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MFPMS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurUserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurUserID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("返回用户列表", "Index")
+</p>

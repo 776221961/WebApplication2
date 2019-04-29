@@ -1,0 +1,267 @@
+﻿@model IEnumerable<WebApplication2.Models.Task>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StationID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.planDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OutCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlanCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DSL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZSL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.XSL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SZ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SZ1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectCmpy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipToAdd1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipToContact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecipeNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectPart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShipVia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CementID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Memo1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Memo2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ustate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SZ2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskCodeERP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prjno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lshao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DSLst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZSLst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.XSLst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SZst)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SZ1st)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intensityLevelt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tldt)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StationID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployeeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.planDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OutCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DSL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZSL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.XSL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SZ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SZ1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectCmpy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipToAdd1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipToContact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecipeNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectPart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShipVia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CementID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memo1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Memo2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Distance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ustate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SZ2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskCodeERP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prjno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lshao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DSLst)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZSLst)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.XSLst)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SZst)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SZ1st)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intensityLevelt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tldt)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TaskID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TaskID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TaskID })
+        </td>
+    </tr>
+}
+
+</table>

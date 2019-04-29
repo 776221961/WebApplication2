@@ -1,0 +1,23 @@
+﻿@model WebApplication2.Models.Users
+    @using WebApplication2.Models
+@{
+    ViewBag.Title = "mainform";
+}
+
+<h2>主页</h2>
+  @{
+      var  a = ViewBag.user as Users ;
+  }
+
+name is:@Html.DisplayFor(u=>a.UserName)
+</br>
+ID  is: @Html.DisplayFor(u=>a.UserID)
+强类型：
+
+   
+       <text> name is :</text>@Html.DisplayFor(model => model.UserName);
+     
+    
+
+
+

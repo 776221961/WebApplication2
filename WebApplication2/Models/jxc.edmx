@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="jxcModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="manufacture">
+          <Key>
+            <PropertyRef Name="mDateTime" />
+          </Key>
+          <Property Name="mDateTime" Type="datetime" Nullable="false" />
+          <Property Name="RecipeID" Type="int" />
+          <Property Name="ItemID" Type="int" />
+          <Property Name="StationID" Type="int" />
+          <Property Name="ItemNO" Type="float" />
+          <Property Name="OperatorID" Type="int" />
+          <Property Name="DeliveryID" Type="int" />
+          <Property Name="RecipeSN1" Type="float" />
+          <Property Name="ActualSN1" Type="float" />
+          <Property Name="RecipeSN2" Type="float" />
+          <Property Name="ActualSN2" Type="float" />
+          <Property Name="RecipeSN3" Type="float" />
+          <Property Name="ActualSN3" Type="float" />
+          <Property Name="RecipeFMH" Type="float" />
+          <Property Name="ActualFMH" Type="float" />
+          <Property Name="RecipeFJJ" Type="float" />
+          <Property Name="ActualFJJ" Type="float" />
+          <Property Name="RecipeKF" Type="float" />
+          <Property Name="ActualKF" Type="float" />
+          <Property Name="RecipeWJJ1" Type="float" />
+          <Property Name="ActualWJJ1" Type="float" />
+          <Property Name="RecipeWJJ2" Type="float" />
+          <Property Name="ActualWJJ2" Type="float" />
+          <Property Name="RecipeDSL" Type="float" />
+          <Property Name="ActualDSL" Type="float" />
+          <Property Name="RecipeZSL" Type="float" />
+          <Property Name="ActualZSL" Type="float" />
+          <Property Name="RecipeXSL" Type="float" />
+          <Property Name="ActualXSL" Type="float" />
+          <Property Name="RecipeSZ" Type="float" />
+          <Property Name="ActualSZ" Type="float" />
+          <Property Name="RecipeSZ1" Type="float" />
+          <Property Name="ActualSZ1" Type="float" />
+          <Property Name="RecipeSHUI" Type="float" />
+          <Property Name="ActualSHUI" Type="float" />
+          <Property Name="RecipeOth1" Type="float" />
+          <Property Name="ActualOth1" Type="float" />
+          <Property Name="RecipeOth2" Type="float" />
+          <Property Name="ActualOth2" Type="float" />
+          <Property Name="RecipeSN4" Type="float" />
+          <Property Name="ActualSN4" Type="float" />
+          <Property Name="RecipeSZ2" Type="float" />
+          <Property Name="ActualSZ2" Type="float" />
+          <Property Name="eDateTime" Type="datetime" />
+          <Property Name="mixtime" Type="float" />
+          <Property Name="v153_number" Type="bigint" />
+          <Property Name="HslDSL" Type="float" />
+          <Property Name="HslZSL" Type="float" />
+          <Property Name="HslXSL" Type="float" />
+          <Property Name="HslSZ" Type="float" />
+          <Property Name="HslSZ1" Type="float" />
+          <Property Name="HslSZ2" Type="float" />
+          <Property Name="HslST3" Type="float" />
+          <Property Name="HslST4" Type="float" />
+          <Property Name="mantype" Type="varchar" MaxLength="10" />
+          <Property Name="bSlurry" Type="bit" />
+          <Property Name="RecipeName" Type="varchar" MaxLength="50" />
+          <Property Name="Actual1" Type="float" />
+          <Property Name="Actual2" Type="float" />
+          <Property Name="Actual3" Type="float" />
+          <Property Name="Actual4" Type="float" />
+          <Property Name="Actual5" Type="float" />
+          <Property Name="Actual6" Type="float" />
+          <Property Name="Actual7" Type="float" />
+          <Property Name="Actual8" Type="float" />
+          <Property Name="Actual9" Type="float" />
+          <Property Name="Actual10" Type="float" />
+          <Property Name="Actual11" Type="float" />
+          <Property Name="Actual12" Type="float" />
+          <Property Name="Actual13" Type="float" />
+          <Property Name="Actual14" Type="float" />
+          <Property Name="Actual15" Type="float" />
+          <Property Name="Actual16" Type="float" />
+          <Property Name="DSLhst" Type="float" />
+          <Property Name="ZSLhst" Type="float" />
+          <Property Name="XSLhst" Type="float" />
+          <Property Name="SZhst" Type="float" />
+          <Property Name="SZ1hst" Type="float" />
+          <Property Name="btx1" Type="bit" />
+          <Property Name="RecipeM17" Type="float" />
+          <Property Name="RecipeM18" Type="float" />
+          <Property Name="RecipeM19" Type="float" />
+          <Property Name="RecipeM20" Type="float" />
+          <Property Name="ActualM17" Type="float" />
+          <Property Name="ActualM18" Type="float" />
+          <Property Name="ActualM19" Type="float" />
+          <Property Name="ActualM20" Type="float" />
+          <Property Name="Actual17" Type="float" />
+          <Property Name="Actual18" Type="float" />
+          <Property Name="Actual19" Type="float" />
+          <Property Name="Actual20" Type="float" />
+          <Property Name="hslM17" Type="float" />
+          <Property Name="hslM18" Type="float" />
+          <Property Name="hslM19" Type="float" />
+          <Property Name="hslM20" Type="float" />
+        </EntityType>
+        <EntityType Name="OutMaster">
+          <Key>
+            <PropertyRef Name="DeliveryID" />
+          </Key>
+          <Property Name="DeliveryID" Type="int" Nullable="false" />
+          <Property Name="DeliveryName" Type="nvarchar" MaxLength="200" />
+          <Property Name="DeliveryDate" Type="datetime" Nullable="false" />
+          <Property Name="TaskID" Type="int" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="ItemID" Type="int" />
+          <Property Name="RecipeNo" Type="nvarchar" MaxLength="200" />
+          <Property Name="Quantity" Type="float" />
+          <Property Name="ItemNo" Type="float" />
+          <Property Name="TruckID" Type="nvarchar" MaxLength="200" />
+          <Property Name="ShipAdd" Type="nvarchar" MaxLength="150" />
+          <Property Name="Distance" Type="int" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="CompanyName" Type="nvarchar" MaxLength="150" />
+          <Property Name="ProjectCmpy" Type="nvarchar" MaxLength="150" />
+          <Property Name="ProjectPart" Type="nvarchar" MaxLength="150" />
+          <Property Name="StationName" Type="nvarchar" MaxLength="150" />
+          <Property Name="PlanCount" Type="float" />
+          <Property Name="EndCount" Type="float" />
+          <Property Name="FName" Type="nvarchar" MaxLength="150" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="150" />
+          <Property Name="OutCount" Type="int" />
+          <Property Name="reserve2" Type="nvarchar" MaxLength="150" />
+          <Property Name="reserve1" Type="int" />
+          <Property Name="CementID" Type="int" />
+          <Property Name="CementName" Type="nvarchar" MaxLength="150" />
+          <Property Name="intensityLevel" Type="nvarchar" MaxLength="150" />
+          <Property Name="ksd" Type="nvarchar" MaxLength="150" />
+          <Property Name="kzd" Type="nvarchar" MaxLength="150" />
+          <Property Name="tld" Type="nvarchar" MaxLength="150" />
+          <Property Name="sljdj" Type="nvarchar" MaxLength="150" />
+          <Property Name="sszdlj" Type="nvarchar" MaxLength="150" />
+          <Property Name="WorkMethod" Type="nvarchar" MaxLength="150" />
+          <Property Name="Memo1" Type="nvarchar" MaxLength="150" />
+          <Property Name="Memo2" Type="nvarchar" MaxLength="150" />
+          <Property Name="dName" Type="nvarchar" MaxLength="150" />
+          <Property Name="TaskName" Type="nvarchar" MaxLength="150" />
+          <Property Name="bSlurry" Type="bit" />
+          <Property Name="SlurryQuantity" Type="float" />
+          <Property Name="SlurryRecipeNo" Type="varchar" MaxLength="50" />
+          <Property Name="TotalItemNo" Type="float" />
+          <Property Name="noEven" Type="bit" />
+          <Property Name="prjno" Type="varchar" MaxLength="50" />
+          <Property Name="lshao" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="recipe">
+          <Key>
+            <PropertyRef Name="RecipeID" />
+            <PropertyRef Name="RecipeName" />
+          </Key>
+          <Property Name="RecipeID" Type="int" Nullable="false" />
+          <Property Name="RecipeName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="RecipeSN1" Type="float" />
+          <Property Name="RecipeSN2" Type="float" />
+          <Property Name="RecipeSN3" Type="float" />
+          <Property Name="RecipeFMH" Type="float" />
+          <Property Name="RecipeFJJ" Type="float" />
+          <Property Name="RecipeKF" Type="float" />
+          <Property Name="RecipeWJJ1" Type="float" />
+          <Property Name="RecipeWJJ2" Type="float" />
+          <Property Name="RecipeDSL" Type="float" />
+          <Property Name="RecipeZSL" Type="float" />
+          <Property Name="RecipeXSL" Type="float" />
+          <Property Name="RecipeSZ" Type="float" />
+          <Property Name="RecipeSZ1" Type="float" />
+          <Property Name="RecipeSHUI" Type="float" />
+          <Property Name="RecipeOth1" Type="float" />
+          <Property Name="RecipeOth2" Type="float" />
+          <Property Name="RecipeSN4" Type="float" />
+          <Property Name="RecipeSZ2" Type="float" />
+          <Property Name="intensityLevel" Type="nvarchar" MaxLength="200" />
+          <Property Name="ksd" Type="nvarchar" MaxLength="200" />
+          <Property Name="kzd" Type="nvarchar" MaxLength="200" />
+          <Property Name="tld" Type="nvarchar" MaxLength="200" />
+          <Property Name="sljdj" Type="nvarchar" MaxLength="200" />
+          <Property Name="sszdlj" Type="nvarchar" MaxLength="200" />
+          <Property Name="sjb" Type="float" />
+          <Property Name="sl" Type="float" />
+          <Property Name="bgmd" Type="float" />
+          <Property Name="OnOrder" Type="float" />
+          <Property Name="RecipeCodeERP" Type="nvarchar" MaxLength="200" />
+          <Property Name="bwnrlsj" Type="bit" />
+          <Property Name="RecipeM17" Type="float" />
+          <Property Name="RecipeM18" Type="float" />
+          <Property Name="RecipeM19" Type="float" />
+          <Property Name="RecipeM20" Type="float" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="TaskID" Type="int" Nullable="false" />
+          <Property Name="TaskName" Type="nvarchar" MaxLength="200" />
+          <Property Name="StationID" Type="int" Nullable="false" />
+          <Property Name="OrderID" Type="int" />
+          <Property Name="ItemID" Type="int" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="planDate" Type="datetime" />
+          <Property Name="OutCount" Type="int" />
+          <Property Name="PlanCount" Type="float" />
+          <Property Name="EndCount" Type="float" />
+          <Property Name="DSL" Type="float" />
+          <Property Name="ZSL" Type="float" />
+          <Property Name="XSL" Type="float" />
+          <Property Name="SZ" Type="float" />
+          <Property Name="SZ1" Type="float" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="ProjectName" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProjectCmpy" Type="nvarchar" MaxLength="200" />
+          <Property Name="ShipToAdd1" Type="nvarchar" MaxLength="200" />
+          <Property Name="ShipToContact" Type="nvarchar" MaxLength="200" />
+          <Property Name="RecipeNo" Type="nvarchar" MaxLength="200" />
+          <Property Name="ProjectPart" Type="nvarchar" MaxLength="200" />
+          <Property Name="WorkMethod" Type="nvarchar" MaxLength="200" />
+          <Property Name="ShipVia" Type="bit" />
+          <Property Name="CementID" Type="int" />
+          <Property Name="Memo1" Type="nvarchar" MaxLength="200" />
+          <Property Name="Memo2" Type="nvarchar" MaxLength="200" />
+          <Property Name="Distance" Type="int" />
+          <Property Name="Ustate" Type="bit" />
+          <Property Name="SZ2" Type="float" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="200" />
+          <Property Name="TaskCodeERP" Type="nvarchar" MaxLength="100" />
+          <Property Name="prjno" Type="varchar" MaxLength="50" />
+          <Property Name="lshao" Type="varchar" MaxLength="50" />
+          <Property Name="DSLst" Type="float" />
+          <Property Name="ZSLst" Type="float" />
+          <Property Name="XSLst" Type="float" />
+          <Property Name="SZst" Type="float" />
+          <Property Name="SZ1st" Type="float" />
+          <Property Name="intensityLevelt" Type="varchar" MaxLength="20" />
+          <Property Name="tldt" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="20" />
+          <Property Name="Uorg" Type="nvarchar" MaxLength="20" />
+          <Property Name="Password" Type="nvarchar" MaxLength="20" />
+          <Property Name="MFPMS" Type="int" />
+          <Property Name="CurUserID" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="jxcModelStoreContainer">
+          <EntitySet Name="manufacture" EntityType="Self.manufacture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OutMaster" EntityType="Self.OutMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="recipe" EntityType="Self.recipe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Task" EntityType="Self.Task" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="jxcModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="manufacture">
+          <Key>
+            <PropertyRef Name="mDateTime" />
+          </Key>
+          <Property Name="mDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RecipeID" Type="Int32" />
+          <Property Name="ItemID" Type="Int32" />
+          <Property Name="StationID" Type="Int32" />
+          <Property Name="ItemNO" Type="Double" />
+          <Property Name="OperatorID" Type="Int32" />
+          <Property Name="DeliveryID" Type="Int32" />
+          <Property Name="RecipeSN1" Type="Double" />
+          <Property Name="ActualSN1" Type="Double" />
+          <Property Name="RecipeSN2" Type="Double" />
+          <Property Name="ActualSN2" Type="Double" />
+          <Property Name="RecipeSN3" Type="Double" />
+          <Property Name="ActualSN3" Type="Double" />
+          <Property Name="RecipeFMH" Type="Double" />
+          <Property Name="ActualFMH" Type="Double" />
+          <Property Name="RecipeFJJ" Type="Double" />
+          <Property Name="ActualFJJ" Type="Double" />
+          <Property Name="RecipeKF" Type="Double" />
+          <Property Name="ActualKF" Type="Double" />
+          <Property Name="RecipeWJJ1" Type="Double" />
+          <Property Name="ActualWJJ1" Type="Double" />
+          <Property Name="RecipeWJJ2" Type="Double" />
+          <Property Name="ActualWJJ2" Type="Double" />
+          <Property Name="RecipeDSL" Type="Double" />
+          <Property Name="ActualDSL" Type="Double" />
+          <Property Name="RecipeZSL" Type="Double" />
+          <Property Name="ActualZSL" Type="Double" />
+          <Property Name="RecipeXSL" Type="Double" />
+          <Property Name="ActualXSL" Type="Double" />
+          <Property Name="RecipeSZ" Type="Double" />
+          <Property Name="ActualSZ" Type="Double" />
+          <Property Name="RecipeSZ1" Type="Double" />
+          <Property Name="ActualSZ1" Type="Double" />
+          <Property Name="RecipeSHUI" Type="Double" />
+          <Property Name="ActualSHUI" Type="Double" />
+          <Property Name="RecipeOth1" Type="Double" />
+          <Property Name="ActualOth1" Type="Double" />
+          <Property Name="RecipeOth2" Type="Double" />
+          <Property Name="ActualOth2" Type="Double" />
+          <Property Name="RecipeSN4" Type="Double" />
+          <Property Name="ActualSN4" Type="Double" />
+          <Property Name="RecipeSZ2" Type="Double" />
+          <Property Name="ActualSZ2" Type="Double" />
+          <Property Name="eDateTime" Type="DateTime" Precision="3" />
+          <Property Name="mixtime" Type="Double" />
+          <Property Name="v153_number" Type="Int64" />
+          <Property Name="HslDSL" Type="Double" />
+          <Property Name="HslZSL" Type="Double" />
+          <Property Name="HslXSL" Type="Double" />
+          <Property Name="HslSZ" Type="Double" />
+          <Property Name="HslSZ1" Type="Double" />
+          <Property Name="HslSZ2" Type="Double" />
+          <Property Name="HslST3" Type="Double" />
+          <Property Name="HslST4" Type="Double" />
+          <Property Name="mantype" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="bSlurry" Type="Boolean" />
+          <Property Name="RecipeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Actual1" Type="Double" />
+          <Property Name="Actual2" Type="Double" />
+          <Property Name="Actual3" Type="Double" />
+          <Property Name="Actual4" Type="Double" />
+          <Property Name="Actual5" Type="Double" />
+          <Property Name="Actual6" Type="Double" />
+          <Property Name="Actual7" Type="Double" />
+          <Property Name="Actual8" Type="Double" />
+          <Property Name="Actual9" Type="Double" />
+          <Property Name="Actual10" Type="Double" />
+          <Property Name="Actual11" Type="Double" />
+          <Property Name="Actual12" Type="Double" />
+          <Property Name="Actual13" Type="Double" />
+          <Property Name="Actual14" Type="Double" />
+          <Property Name="Actual15" Type="Double" />
+          <Property Name="Actual16" Type="Double" />
+          <Property Name="DSLhst" Type="Double" />
+          <Property Name="ZSLhst" Type="Double" />
+          <Property Name="XSLhst" Type="Double" />
+          <Property Name="SZhst" Type="Double" />
+          <Property Name="SZ1hst" Type="Double" />
+          <Property Name="btx1" Type="Boolean" />
+          <Property Name="RecipeM17" Type="Double" />
+          <Property Name="RecipeM18" Type="Double" />
+          <Property Name="RecipeM19" Type="Double" />
+          <Property Name="RecipeM20" Type="Double" />
+          <Property Name="ActualM17" Type="Double" />
+          <Property Name="ActualM18" Type="Double" />
+          <Property Name="ActualM19" Type="Double" />
+          <Property Name="ActualM20" Type="Double" />
+          <Property Name="Actual17" Type="Double" />
+          <Property Name="Actual18" Type="Double" />
+          <Property Name="Actual19" Type="Double" />
+          <Property Name="Actual20" Type="Double" />
+          <Property Name="hslM17" Type="Double" />
+          <Property Name="hslM18" Type="Double" />
+          <Property Name="hslM19" Type="Double" />
+          <Property Name="hslM20" Type="Double" />
+        </EntityType>
+        <EntityType Name="OutMaster">
+          <Key>
+            <PropertyRef Name="DeliveryID" />
+          </Key>
+          <Property Name="DeliveryID" Type="Int32" Nullable="false" />
+          <Property Name="DeliveryName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DeliveryDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TaskID" Type="Int32" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="ItemID" Type="Int32" />
+          <Property Name="RecipeNo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Quantity" Type="Double" />
+          <Property Name="ItemNo" Type="Double" />
+          <Property Name="TruckID" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ShipAdd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Distance" Type="Int32" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="CompanyName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectCmpy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectPart" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="StationName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="PlanCount" Type="Double" />
+          <Property Name="EndCount" Type="Double" />
+          <Property Name="FName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="OutCount" Type="Int32" />
+          <Property Name="reserve2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="reserve1" Type="Int32" />
+          <Property Name="CementID" Type="Int32" />
+          <Property Name="CementName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="intensityLevel" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ksd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="kzd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="tld" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="sljdj" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="sszdlj" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="WorkMethod" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Memo1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Memo2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="dName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TaskName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="bSlurry" Type="Boolean" />
+          <Property Name="SlurryQuantity" Type="Double" />
+          <Property Name="SlurryRecipeNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TotalItemNo" Type="Double" />
+          <Property Name="noEven" Type="Boolean" />
+          <Property Name="prjno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="lshao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="recipe">
+          <Key>
+            <PropertyRef Name="RecipeID" />
+            <PropertyRef Name="RecipeName" />
+          </Key>
+          <Property Name="RecipeID" Type="Int32" Nullable="false" />
+          <Property Name="RecipeName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RecipeSN1" Type="Double" />
+          <Property Name="RecipeSN2" Type="Double" />
+          <Property Name="RecipeSN3" Type="Double" />
+          <Property Name="RecipeFMH" Type="Double" />
+          <Property Name="RecipeFJJ" Type="Double" />
+          <Property Name="RecipeKF" Type="Double" />
+          <Property Name="RecipeWJJ1" Type="Double" />
+          <Property Name="RecipeWJJ2" Type="Double" />
+          <Property Name="RecipeDSL" Type="Double" />
+          <Property Name="RecipeZSL" Type="Double" />
+          <Property Name="RecipeXSL" Type="Double" />
+          <Property Name="RecipeSZ" Type="Double" />
+          <Property Name="RecipeSZ1" Type="Double" />
+          <Property Name="RecipeSHUI" Type="Double" />
+          <Property Name="RecipeOth1" Type="Double" />
+          <Property Name="RecipeOth2" Type="Double" />
+          <Property Name="RecipeSN4" Type="Double" />
+          <Property Name="RecipeSZ2" Type="Double" />
+          <Property Name="intensityLevel" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ksd" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="kzd" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="tld" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="sljdj" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="sszdlj" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="sjb" Type="Double" />
+          <Property Name="sl" Type="Double" />
+          <Property Name="bgmd" Type="Double" />
+          <Property Name="OnOrder" Type="Double" />
+          <Property Name="RecipeCodeERP" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="bwnrlsj" Type="Boolean" />
+          <Property Name="RecipeM17" Type="Double" />
+          <Property Name="RecipeM18" Type="Double" />
+          <Property Name="RecipeM19" Type="Double" />
+          <Property Name="RecipeM20" Type="Double" />
+        </EntityType>
+        <EntityType Name="Task">
+          <Key>
+            <PropertyRef Name="TaskID" />
+          </Key>
+          <Property Name="TaskID" Type="Int32" Nullable="false" />
+          <Property Name="TaskName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="StationID" Type="Int32" Nullable="false" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="ItemID" Type="Int32" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="planDate" Type="DateTime" Precision="3" />
+          <Property Name="OutCount" Type="Int32" />
+          <Property Name="PlanCount" Type="Double" />
+          <Property Name="EndCount" Type="Double" />
+          <Property Name="DSL" Type="Double" />
+          <Property Name="ZSL" Type="Double" />
+          <Property Name="XSL" Type="Double" />
+          <Property Name="SZ" Type="Double" />
+          <Property Name="SZ1" Type="Double" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="ProjectName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectCmpy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ShipToAdd1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ShipToContact" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="RecipeNo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectPart" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="WorkMethod" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ShipVia" Type="Boolean" />
+          <Property Name="CementID" Type="Int32" />
+          <Property Name="Memo1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Memo2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Distance" Type="Int32" />
+          <Property Name="Ustate" Type="Boolean" />
+          <Property Name="SZ2" Type="Double" />
+          <Property Name="CustomerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TaskCodeERP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="prjno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="lshao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DSLst" Type="Double" />
+          <Property Name="ZSLst" Type="Double" />
+          <Property Name="XSLst" Type="Double" />
+          <Property Name="SZst" Type="Double" />
+          <Property Name="SZ1st" Type="Double" />
+          <Property Name="intensityLevelt" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="tldt" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Uorg" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MFPMS" Type="Int32" />
+          <Property Name="CurUserID" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="jxcEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="manufacture" EntityType="Self.manufacture" />
+          <EntitySet Name="OutMaster" EntityType="Self.OutMaster" />
+          <EntitySet Name="recipe" EntityType="Self.recipe" />
+          <EntitySet Name="Task" EntityType="Self.Task" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="jxcModelStoreContainer" CdmEntityContainer="jxcEntities1">
+          <EntitySetMapping Name="manufacture">
+            <EntityTypeMapping TypeName="jxcModel.manufacture">
+              <MappingFragment StoreEntitySet="manufacture">
+                <ScalarProperty Name="mDateTime" ColumnName="mDateTime" />
+                <ScalarProperty Name="RecipeID" ColumnName="RecipeID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="StationID" ColumnName="StationID" />
+                <ScalarProperty Name="ItemNO" ColumnName="ItemNO" />
+                <ScalarProperty Name="OperatorID" ColumnName="OperatorID" />
+                <ScalarProperty Name="DeliveryID" ColumnName="DeliveryID" />
+                <ScalarProperty Name="RecipeSN1" ColumnName="RecipeSN1" />
+                <ScalarProperty Name="ActualSN1" ColumnName="ActualSN1" />
+                <ScalarProperty Name="RecipeSN2" ColumnName="RecipeSN2" />
+                <ScalarProperty Name="ActualSN2" ColumnName="ActualSN2" />
+                <ScalarProperty Name="RecipeSN3" ColumnName="RecipeSN3" />
+                <ScalarProperty Name="ActualSN3" ColumnName="ActualSN3" />
+                <ScalarProperty Name="RecipeFMH" ColumnName="RecipeFMH" />
+                <ScalarProperty Name="ActualFMH" ColumnName="ActualFMH" />
+                <ScalarProperty Name="RecipeFJJ" ColumnName="RecipeFJJ" />
+                <ScalarProperty Name="ActualFJJ" ColumnName="ActualFJJ" />
+                <ScalarProperty Name="RecipeKF" ColumnName="RecipeKF" />
+                <ScalarProperty Name="ActualKF" ColumnName="ActualKF" />
+                <ScalarProperty Name="RecipeWJJ1" ColumnName="RecipeWJJ1" />
+                <ScalarProperty Name="ActualWJJ1" ColumnName="ActualWJJ1" />
+                <ScalarProperty Name="RecipeWJJ2" ColumnName="RecipeWJJ2" />
+                <ScalarProperty Name="ActualWJJ2" ColumnName="ActualWJJ2" />
+                <ScalarProperty Name="RecipeDSL" ColumnName="RecipeDSL" />
+                <ScalarProperty Name="ActualDSL" ColumnName="ActualDSL" />
+                <ScalarProperty Name="RecipeZSL" ColumnName="RecipeZSL" />
+                <ScalarProperty Name="ActualZSL" ColumnName="ActualZSL" />
+                <ScalarProperty Name="RecipeXSL" ColumnName="RecipeXSL" />
+                <ScalarProperty Name="ActualXSL" ColumnName="ActualXSL" />
+                <ScalarProperty Name="RecipeSZ" ColumnName="RecipeSZ" />
+                <ScalarProperty Name="ActualSZ" ColumnName="ActualSZ" />
+                <ScalarProperty Name="RecipeSZ1" ColumnName="RecipeSZ1" />
+                <ScalarProperty Name="ActualSZ1" ColumnName="ActualSZ1" />
+                <ScalarProperty Name="RecipeSHUI" ColumnName="RecipeSHUI" />
+                <ScalarProperty Name="ActualSHUI" ColumnName="ActualSHUI" />
+                <ScalarProperty Name="RecipeOth1" ColumnName="RecipeOth1" />
+                <ScalarProperty Name="ActualOth1" ColumnName="ActualOth1" />
+                <ScalarProperty Name="RecipeOth2" ColumnName="RecipeOth2" />
+                <ScalarProperty Name="ActualOth2" ColumnName="ActualOth2" />
+                <ScalarProperty Name="RecipeSN4" ColumnName="RecipeSN4" />
+                <ScalarProperty Name="ActualSN4" ColumnName="ActualSN4" />
+                <ScalarProperty Name="RecipeSZ2" ColumnName="RecipeSZ2" />
+                <ScalarProperty Name="ActualSZ2" ColumnName="ActualSZ2" />
+                <ScalarProperty Name="eDateTime" ColumnName="eDateTime" />
+                <ScalarProperty Name="mixtime" ColumnName="mixtime" />
+                <ScalarProperty Name="v153_number" ColumnName="v153_number" />
+                <ScalarProperty Name="HslDSL" ColumnName="HslDSL" />
+                <ScalarProperty Name="HslZSL" ColumnName="HslZSL" />
+                <ScalarProperty Name="HslXSL" ColumnName="HslXSL" />
+                <ScalarProperty Name="HslSZ" ColumnName="HslSZ" />
+                <ScalarProperty Name="HslSZ1" ColumnName="HslSZ1" />
+                <ScalarProperty Name="HslSZ2" ColumnName="HslSZ2" />
+                <ScalarProperty Name="HslST3" ColumnName="HslST3" />
+                <ScalarProperty Name="HslST4" ColumnName="HslST4" />
+                <ScalarProperty Name="mantype" ColumnName="mantype" />
+                <ScalarProperty Name="bSlurry" ColumnName="bSlurry" />
+                <ScalarProperty Name="RecipeName" ColumnName="RecipeName" />
+                <ScalarProperty Name="Actual1" ColumnName="Actual1" />
+                <ScalarProperty Name="Actual2" ColumnName="Actual2" />
+                <ScalarProperty Name="Actual3" ColumnName="Actual3" />
+                <ScalarProperty Name="Actual4" ColumnName="Actual4" />
+                <ScalarProperty Name="Actual5" ColumnName="Actual5" />
+                <ScalarProperty Name="Actual6" ColumnName="Actual6" />
+                <ScalarProperty Name="Actual7" ColumnName="Actual7" />
+                <ScalarProperty Name="Actual8" ColumnName="Actual8" />
+                <ScalarProperty Name="Actual9" ColumnName="Actual9" />
+                <ScalarProperty Name="Actual10" ColumnName="Actual10" />
+                <ScalarProperty Name="Actual11" ColumnName="Actual11" />
+                <ScalarProperty Name="Actual12" ColumnName="Actual12" />
+                <ScalarProperty Name="Actual13" ColumnName="Actual13" />
+                <ScalarProperty Name="Actual14" ColumnName="Actual14" />
+                <ScalarProperty Name="Actual15" ColumnName="Actual15" />
+                <ScalarProperty Name="Actual16" ColumnName="Actual16" />
+                <ScalarProperty Name="DSLhst" ColumnName="DSLhst" />
+                <ScalarProperty Name="ZSLhst" ColumnName="ZSLhst" />
+                <ScalarProperty Name="XSLhst" ColumnName="XSLhst" />
+                <ScalarProperty Name="SZhst" ColumnName="SZhst" />
+                <ScalarProperty Name="SZ1hst" ColumnName="SZ1hst" />
+                <ScalarProperty Name="btx1" ColumnName="btx1" />
+                <ScalarProperty Name="RecipeM17" ColumnName="RecipeM17" />
+                <ScalarProperty Name="RecipeM18" ColumnName="RecipeM18" />
+                <ScalarProperty Name="RecipeM19" ColumnName="RecipeM19" />
+                <ScalarProperty Name="RecipeM20" ColumnName="RecipeM20" />
+                <ScalarProperty Name="ActualM17" ColumnName="ActualM17" />
+                <ScalarProperty Name="ActualM18" ColumnName="ActualM18" />
+                <ScalarProperty Name="ActualM19" ColumnName="ActualM19" />
+                <ScalarProperty Name="ActualM20" ColumnName="ActualM20" />
+                <ScalarProperty Name="Actual17" ColumnName="Actual17" />
+                <ScalarProperty Name="Actual18" ColumnName="Actual18" />
+                <ScalarProperty Name="Actual19" ColumnName="Actual19" />
+                <ScalarProperty Name="Actual20" ColumnName="Actual20" />
+                <ScalarProperty Name="hslM17" ColumnName="hslM17" />
+                <ScalarProperty Name="hslM18" ColumnName="hslM18" />
+                <ScalarProperty Name="hslM19" ColumnName="hslM19" />
+                <ScalarProperty Name="hslM20" ColumnName="hslM20" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OutMaster">
+            <EntityTypeMapping TypeName="jxcModel.OutMaster">
+              <MappingFragment StoreEntitySet="OutMaster">
+                <ScalarProperty Name="DeliveryID" ColumnName="DeliveryID" />
+                <ScalarProperty Name="DeliveryName" ColumnName="DeliveryName" />
+                <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="RecipeNo" ColumnName="RecipeNo" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ItemNo" ColumnName="ItemNo" />
+                <ScalarProperty Name="TruckID" ColumnName="TruckID" />
+                <ScalarProperty Name="ShipAdd" ColumnName="ShipAdd" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="ProjectCmpy" ColumnName="ProjectCmpy" />
+                <ScalarProperty Name="ProjectPart" ColumnName="ProjectPart" />
+                <ScalarProperty Name="StationName" ColumnName="StationName" />
+                <ScalarProperty Name="PlanCount" ColumnName="PlanCount" />
+                <ScalarProperty Name="EndCount" ColumnName="EndCount" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="OutCount" ColumnName="OutCount" />
+                <ScalarProperty Name="reserve2" ColumnName="reserve2" />
+                <ScalarProperty Name="reserve1" ColumnName="reserve1" />
+                <ScalarProperty Name="CementID" ColumnName="CementID" />
+                <ScalarProperty Name="CementName" ColumnName="CementName" />
+                <ScalarProperty Name="intensityLevel" ColumnName="intensityLevel" />
+                <ScalarProperty Name="ksd" ColumnName="ksd" />
+                <ScalarProperty Name="kzd" ColumnName="kzd" />
+                <ScalarProperty Name="tld" ColumnName="tld" />
+                <ScalarProperty Name="sljdj" ColumnName="sljdj" />
+                <ScalarProperty Name="sszdlj" ColumnName="sszdlj" />
+                <ScalarProperty Name="WorkMethod" ColumnName="WorkMethod" />
+                <ScalarProperty Name="Memo1" ColumnName="Memo1" />
+                <ScalarProperty Name="Memo2" ColumnName="Memo2" />
+                <ScalarProperty Name="dName" ColumnName="dName" />
+                <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+                <ScalarProperty Name="bSlurry" ColumnName="bSlurry" />
+                <ScalarProperty Name="SlurryQuantity" ColumnName="SlurryQuantity" />
+                <ScalarProperty Name="SlurryRecipeNo" ColumnName="SlurryRecipeNo" />
+                <ScalarProperty Name="TotalItemNo" ColumnName="TotalItemNo" />
+                <ScalarProperty Name="noEven" ColumnName="noEven" />
+                <ScalarProperty Name="prjno" ColumnName="prjno" />
+                <ScalarProperty Name="lshao" ColumnName="lshao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="recipe">
+            <EntityTypeMapping TypeName="jxcModel.recipe">
+              <MappingFragment StoreEntitySet="recipe">
+                <ScalarProperty Name="RecipeID" ColumnName="RecipeID" />
+                <ScalarProperty Name="RecipeName" ColumnName="RecipeName" />
+                <ScalarProperty Name="RecipeSN1" ColumnName="RecipeSN1" />
+                <ScalarProperty Name="RecipeSN2" ColumnName="RecipeSN2" />
+                <ScalarProperty Name="RecipeSN3" ColumnName="RecipeSN3" />
+                <ScalarProperty Name="RecipeFMH" ColumnName="RecipeFMH" />
+                <ScalarProperty Name="RecipeFJJ" ColumnName="RecipeFJJ" />
+                <ScalarProperty Name="RecipeKF" ColumnName="RecipeKF" />
+                <ScalarProperty Name="RecipeWJJ1" ColumnName="RecipeWJJ1" />
+                <ScalarProperty Name="RecipeWJJ2" ColumnName="RecipeWJJ2" />
+                <ScalarProperty Name="RecipeDSL" ColumnName="RecipeDSL" />
+                <ScalarProperty Name="RecipeZSL" ColumnName="RecipeZSL" />
+                <ScalarProperty Name="RecipeXSL" ColumnName="RecipeXSL" />
+                <ScalarProperty Name="RecipeSZ" ColumnName="RecipeSZ" />
+                <ScalarProperty Name="RecipeSZ1" ColumnName="RecipeSZ1" />
+                <ScalarProperty Name="RecipeSHUI" ColumnName="RecipeSHUI" />
+                <ScalarProperty Name="RecipeOth1" ColumnName="RecipeOth1" />
+                <ScalarProperty Name="RecipeOth2" ColumnName="RecipeOth2" />
+                <ScalarProperty Name="RecipeSN4" ColumnName="RecipeSN4" />
+                <ScalarProperty Name="RecipeSZ2" ColumnName="RecipeSZ2" />
+                <ScalarProperty Name="intensityLevel" ColumnName="intensityLevel" />
+                <ScalarProperty Name="ksd" ColumnName="ksd" />
+                <ScalarProperty Name="kzd" ColumnName="kzd" />
+                <ScalarProperty Name="tld" ColumnName="tld" />
+                <ScalarProperty Name="sljdj" ColumnName="sljdj" />
+                <ScalarProperty Name="sszdlj" ColumnName="sszdlj" />
+                <ScalarProperty Name="sjb" ColumnName="sjb" />
+                <ScalarProperty Name="sl" ColumnName="sl" />
+                <ScalarProperty Name="bgmd" ColumnName="bgmd" />
+                <ScalarProperty Name="OnOrder" ColumnName="OnOrder" />
+                <ScalarProperty Name="RecipeCodeERP" ColumnName="RecipeCodeERP" />
+                <ScalarProperty Name="bwnrlsj" ColumnName="bwnrlsj" />
+                <ScalarProperty Name="RecipeM17" ColumnName="RecipeM17" />
+                <ScalarProperty Name="RecipeM18" ColumnName="RecipeM18" />
+                <ScalarProperty Name="RecipeM19" ColumnName="RecipeM19" />
+                <ScalarProperty Name="RecipeM20" ColumnName="RecipeM20" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Task">
+            <EntityTypeMapping TypeName="jxcModel.Task">
+              <MappingFragment StoreEntitySet="Task">
+                <ScalarProperty Name="TaskID" ColumnName="TaskID" />
+                <ScalarProperty Name="TaskName" ColumnName="TaskName" />
+                <ScalarProperty Name="StationID" ColumnName="StationID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="planDate" ColumnName="planDate" />
+                <ScalarProperty Name="OutCount" ColumnName="OutCount" />
+                <ScalarProperty Name="PlanCount" ColumnName="PlanCount" />
+                <ScalarProperty Name="EndCount" ColumnName="EndCount" />
+                <ScalarProperty Name="DSL" ColumnName="DSL" />
+                <ScalarProperty Name="ZSL" ColumnName="ZSL" />
+                <ScalarProperty Name="XSL" ColumnName="XSL" />
+                <ScalarProperty Name="SZ" ColumnName="SZ" />
+                <ScalarProperty Name="SZ1" ColumnName="SZ1" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="ProjectCmpy" ColumnName="ProjectCmpy" />
+                <ScalarProperty Name="ShipToAdd1" ColumnName="ShipToAdd1" />
+                <ScalarProperty Name="ShipToContact" ColumnName="ShipToContact" />
+                <ScalarProperty Name="RecipeNo" ColumnName="RecipeNo" />
+                <ScalarProperty Name="ProjectPart" ColumnName="ProjectPart" />
+                <ScalarProperty Name="WorkMethod" ColumnName="WorkMethod" />
+                <ScalarProperty Name="ShipVia" ColumnName="ShipVia" />
+                <ScalarProperty Name="CementID" ColumnName="CementID" />
+                <ScalarProperty Name="Memo1" ColumnName="Memo1" />
+                <ScalarProperty Name="Memo2" ColumnName="Memo2" />
+                <ScalarProperty Name="Distance" ColumnName="Distance" />
+                <ScalarProperty Name="Ustate" ColumnName="Ustate" />
+                <ScalarProperty Name="SZ2" ColumnName="SZ2" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="TaskCodeERP" ColumnName="TaskCodeERP" />
+                <ScalarProperty Name="prjno" ColumnName="prjno" />
+                <ScalarProperty Name="lshao" ColumnName="lshao" />
+                <ScalarProperty Name="DSLst" ColumnName="DSLst" />
+                <ScalarProperty Name="ZSLst" ColumnName="ZSLst" />
+                <ScalarProperty Name="XSLst" ColumnName="XSLst" />
+                <ScalarProperty Name="SZst" ColumnName="SZst" />
+                <ScalarProperty Name="SZ1st" ColumnName="SZ1st" />
+                <ScalarProperty Name="intensityLevelt" ColumnName="intensityLevelt" />
+                <ScalarProperty Name="tldt" ColumnName="tldt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="jxcModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Uorg" ColumnName="Uorg" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="MFPMS" ColumnName="MFPMS" />
+                <ScalarProperty Name="CurUserID" ColumnName="CurUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<WebApplication2.Models.Users>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>用户列表</h2>
+
+<p>
+    @Html.ActionLink("新增用户", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+       
+       
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+       
+        <td>
+         
+            @Html.ActionLink("详细", "Details", new { id=item.UserID }) |
+           @Html.ActionLink("编辑", "Edit", new { id = item.UserID }) |
+    @Html.ActionLink("删除", "Delete", new { id=item.UserID }) 
+        </td>
+    </tr>
+}
+
+</table>
+
+@section Footer{ <p>用户</p>}
